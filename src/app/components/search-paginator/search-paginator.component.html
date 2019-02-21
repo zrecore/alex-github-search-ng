@@ -1,0 +1,14 @@
+<div *ngIf="searchResults.total_count > 0" class="container">
+  <p>{{searchResults.total_count}} records. (30 per page)</p>
+  <div class="paginator_controls">
+    <button class="first" type="button" (click)="handlePaginatorControl('first')">First</button>
+    <button class="previous" type="button" (click)="handlePaginatorControl('previous')">Previous</button>
+    <span class="current"> {{ userService.pageIndex.value }} </span>
+    <button class="next" type="button" (click)="handlePaginatorControl('next')">Next</button>
+    <button class="last" type="button" (click)="handlePaginatorControl('last')">Last</button>
+  </div>
+  <a [href]="item.html_url" target="_blank" *ngFor="let item of searchResults.items">
+    <img [src]="item.avatar_url" alt="">
+    <span>{{item.login}}</span>
+  </a>
+</div>

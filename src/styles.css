@@ -1,0 +1,82 @@
+/* Add application styles & imports to this file! */
+
+/* Let's set the theme colors as variables */
+:root
+{
+  --bg-main-color: #222;
+  --bg-input-color: #fff;
+  --bg-primary-color: #f0f;
+
+  --font-main-color: #fff;
+  --font-input-color: #222;
+  --font-label-color: #f0f;
+  --font-button-color: var(--font-main-color);
+  --font-family: Lato;
+}
+
+/* Stylize our stuff */
+body
+{
+  font-family: var(--font-family);
+
+  background-color: var(--bg-main-color);
+  color: var(--font-main-color);
+
+  margin: 0;
+  padding: 2rem;
+}
+
+div.container {
+  display: grid;
+  grid-template-columns: 12;
+  justify-content: center;
+}
+
+input, button {
+  border-style: none;
+  box-shadow: none;
+  font-size: 1rem;
+}
+
+label { 
+  grid-column-start: 1;
+  grid-column-end: 3;
+  color: var(--font-primary-color);
+  padding: 0.5rem;
+  padding-right: 1rem;
+}
+
+input {
+  grid-column-start: 3;
+  grid-column-end: 8;
+  color: var(--font-input-color);
+  background: var(--bg-input-color);
+  border-right: 0;
+  line-height: 1.2rem;
+  padding: 0.5rem;
+}
+
+button {
+  grid-column-start: 8;
+  grid-column-end: auto;
+  border-style: none;
+  background-color: var(--bg-primary-color);
+  color: var(--font-button-color);
+  border-left: 0;
+}
+
+a {
+  color: var(--font-primary-color);
+}
+
+/* @TODO calculate state colors and hard code theme, since we're not using SASS */
+a :link {};
+a :visited {};
+a :hover {};
+a :active {};
+
+/* Top level components */
+app-search-paginator
+{
+  width: 100%;
+}

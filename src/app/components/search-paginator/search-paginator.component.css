@@ -1,0 +1,64 @@
+div.container
+{
+  display: inline;
+}
+
+div.container p
+{
+  text-align: center;
+  font-style: italic;
+  color: #f0f;
+}
+
+div.paginator_controls
+{
+  grid-column-start: 1;
+  grid-column-end: auto;
+  display: grid;
+  border: solid 1px #f0f;
+  
+}
+div.paginator_controls button
+{
+  cursor: pointer;
+}
+
+div.paginator_controls .first
+{
+  grid-column-start: 1;
+  grid-column-end: span 2;
+}
+div.paginator_controls .previous
+{
+  grid-column-start: 3;
+  grid-column-end: span 2;
+}
+div.paginator_controls .current
+{
+  grid-column-start: 5;
+  grid-column-end: span 2;
+  text-align: center;
+}
+div.paginator_controls .next
+{
+  grid-column-start: 7;
+  grid-column-end: span 2;
+}
+div.paginator_controls .last
+{
+  grid-column-start: 9;
+  grid-column-end: span 2;
+}
+img
+{
+  max-width: 5rem;
+  clear: both;
+  display: block;
+  margin: 0 0 0.5rem 0;
+}
+
+a
+{
+  display: block;
+  padding: 1rem;
+}
